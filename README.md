@@ -64,8 +64,20 @@ These changes were motivated by **signaling, visual hierarchy, Gestalt grouping,
 
 ### Before and After
 
-**Before:** The prototype was called Duet, had longer copy, limited visual hierarchy, and did not emphasize the most important information.
+**Before: Initial AI Version**
 
-**After:** The prototype is called WedSinger, uses shorter messaging, has a wedding/music logo, emphasizes important information through hierarchy and grouping, and has clearer navigation.
+![Initial AI landing screen](before1.png)
+![Initial AI match screen](before2.png)
 
-The original AI version is available in the repository's commit history so it can be compared with the revised version.
+**After: Revised WedSinger Version**
+
+![Revised WedSinger landing screen](after1.png)
+![Revised WedSinger match screen](after2.png)
+
+The original AI version was called Duet, had longer copy, limited visual hierarchy, and did not emphasize the most important information.
+
+The revised version is called WedSinger, uses shorter messaging, has a wedding/music logo, emphasizes important information through hierarchy and grouping, and has clearer navigation.
+
+## Live Prototype
+
+[Open the WedSinger prototype](https://wedsingerprototype.vercel.app/)
