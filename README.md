@@ -66,13 +66,15 @@ These changes were motivated by **signaling, visual hierarchy, Gestalt grouping,
 
 **Before: Initial AI Version**
 
-![Initial AI landing screen](before1.png)
-![Initial AI match screen](before2.png)
+<img src="before1.png" alt="Initial AI landing screen" width="500">
+
+<img src="before2.png" alt="Initial AI match screen" width="500">
 
 **After: Revised WedSinger Version**
 
-![Revised WedSinger landing screen](after1.png)
-![Revised WedSinger match screen](after2.png)
+<img src="after1.png" alt="Revised WedSinger landing screen" width="500">
+
+<img src="after2.png" alt="Revised WedSinger match screen" width="500">
 
 The original AI version was called Duet, had longer copy, limited visual hierarchy, and did not emphasize the most important information.
 
