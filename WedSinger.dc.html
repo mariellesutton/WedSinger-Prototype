@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#9d2b4e"/><text x="50" y="62" font-family="Georgia,serif" font-size="34" fill="#fdf8f4" text-anchor="middle">WS</text></svg></template>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #ece5dd; -webkit-font-smoothing: antialiased; }
+  a { color: #9d2b4e; }
+  a:hover { color: #7d1f3c; }
+  *, *::before, *::after { box-sizing: border-box; }
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 32px 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #2a2321; position: absolute; left: 164px; top: -8px">
+  <div style="width: 100%; max-width: 430px; background: #faf6f1; box-shadow: 0 18px 50px rgba(60,40,35,0.16); overflow: hidden; min-height: 780px; display: flex; flex-direction: column;">
+
+    <sc-if value="{{ onLanding }}" hint-placeholder-val="{{ true }}">
+      <div style="flex: 1; position: relative; display: flex; flex-direction: column; background: #faf6f1;">
+        <div style="position: absolute; inset: 0;">
+          <image-slot id="wedsinger-landing-bg" shape="rect" fit="cover" src="./wedding-live-music.webp" placeholder="Drop a photo: singer &amp; pianist performing, couples watching from the reception tables"></image-slot>
+        </div>
+        <div style="position: absolute; inset: 0; pointer-events: none; background: {{ bgScrim }}"></div>
+
+        <div style="position: relative; flex: 1; display: flex; flex-direction: column; padding: 0 32px; pointer-events: none;">
+          <div style="padding: 34px 0 0; display: flex; align-items: center; gap: 11px;">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" stroke="{{ bgMark }}" stroke-width="1.6"></circle>
+              <circle cx="13" cy="21" r="3.1" fill="{{ bgMark }}"></circle>
+              <rect x="15.2" y="9" width="1.6" height="12" fill="{{ bgMark }}"></rect>
+              <rect x="15.2" y="9" width="7.4" height="1.6" fill="{{ bgMark }}"></rect>
+            </svg>
+            <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 19px; letter-spacing: 0.18em; text-transform: uppercase; color: {{ bgMark }}">WedSinger</div>
+          </div>
+
+          <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 48px 0;">
+            <h1 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 46px; line-height: 1.12; letter-spacing: -0.01em; margin: 0; text-wrap: pretty; color: {{ bgInk }}; text-shadow: {{ bgShadow }}">Get <span style="color: {{ bgAccent }}; font-style: italic;">Found</span>.</h1>
+            <div style="height: 1px; margin: 40px 0 0; width: 64px; background: {{ bgRule }}"></div>
+            <p style="margin: 28px 0 0; font-size: 15px; line-height: 1.65; max-width: 300px; color: {{ bgBody }}; text-shadow: {{ bgShadow }}">WedSinger matches you to couples searching for live music for their wedding.</p>
+          </div>
+
+          <div style="padding-bottom: 40px; display: flex; flex-direction: column; gap: 14px;">
+            <button type="button" onClick="{{ goMatches }}" style="width: 100%; border: none; background: #9d2b4e; color: #fdfaf7; font-size: 16px; font-weight: 500; letter-spacing: 0.02em; padding: 19px; cursor: pointer; font-family: inherit; pointer-events: auto;" style-hover="background: #85203f;">Show me couples</button>
+            <div style="text-align: center; font-size: 13px; color: {{ bgBody }}">Free to list · No commission on your fee</div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ onMatches }}">
+      <div style="flex: 1; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center; gap: 14px; padding: 26px 24px 22px; border-bottom: 1px solid #e8ded4;">
+          <button type="button" onClick="{{ goLanding }}" style="display: flex; align-items: center; gap: 8px; border: none; background: transparent; padding: 0; cursor: pointer; color: #9d2b4e;" style-hover="color: #7d1f3c;">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.9"></circle>
+              <circle cx="13" cy="21" r="3.1" fill="currentColor"></circle>
+              <rect x="15.2" y="9" width="1.8" height="12" fill="currentColor"></rect>
+              <rect x="15.2" y="9" width="7.4" height="1.8" fill="currentColor"></rect>
+            </svg>
+            <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: inherit;">WedSinger</span>
+          </button>
+        </div>
+
+        <div style="padding: 28px 24px 8px; width: 432px; height: 83px">
+          
+          <h2 style="margin: 0; display: flex; align-items: baseline; gap: 9px; white-space: nowrap; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 21px; line-height: 1; justify-content: center; width: 383px; height: 59px">
+            <span style="font-size: 50px; line-height: 1; color: #9d2b4e; font-weight: 700; letter-spacing: -0.02em">7</span><span style="width: 183px; height: 36px; font-size: 28px">couples want a</span><span style="background: #9d2b4e; color: #fdfaf7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 500; letter-spacing: 0.01em; padding: 6px 14px 7px; border-radius: 999px">singer &amp; pianist</span>
+            
+            
+          </h2>
+        </div>
+
+        <div style="padding: 20px 24px 32px; display: flex; flex-direction: column; gap: 14px;">
+          <sc-for list="{{ matches }}" as="m" hint-placeholder-count="4">
+            <button type="button" onClick="{{ m.open }}" style="text-align: left; width: 100%; background: #fffdfb; border: 1px solid #e8ded4; padding: 20px; cursor: pointer; font-family: inherit; display: block;" style-hover="border-color: #c9a5ae; background: #fffefd;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+                <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 21px; color: #2a2321;">{{ m.couple }}</div>
+                <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #9d2b4e; white-space: nowrap;">{{ m.fit }}</div>
+              </div>
+              <div style="display: flex; gap: 8px; align-items: baseline; margin-top: 7px; font-size: 13.5px; color: #6b5f59;">
+                <span>{{ m.date }}</span><span style="color: #ccbdb3;">·</span><span>{{ m.venue }}</span>
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; padding-top: 14px; border-top: 1px solid #efe6dd;">
+                <span style="font-size: 12px; color: #6b5f59; background: #f4ece4; padding: 5px 10px;">{{ m.style }}</span>
+                <span style="font-size: 12px; color: #6b5f59; background: #f4ece4; padding: 5px 10px;">{{ m.budget }}</span>
+                <span style="font-size: 12px; color: #6b5f59; background: #f4ece4; padding: 5px 10px;">{{ m.length }}</span>
+              </div>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ onDetail }}">
+      <div style="flex: 1; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center; justify-content: flex-start; gap: 14px; padding: 26px 24px 22px; border-bottom: 1px solid #e8ded4">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            
+            
+          </div><button type="button" onClick="{{ goLanding }}" style="border: none; background: transparent; cursor: pointer; font-family: 'Playfair Display', Georgia, serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #9d2b4e; padding: 0; display: flex; align-items: center; gap: 8px; flex-direction: row" style-hover="color: #7d1f3c;"><svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.9"></circle><circle cx="13" cy="21" r="3.1" fill="currentColor"></circle><rect x="15.2" y="9" width="1.8" height="12" fill="currentColor"></rect><rect x="15.2" y="9" width="7.4" height="1.8" fill="currentColor"></rect></svg>WedSinger</button>
+          
+        </div>
+
+        <div style="flex: 1; overflow: auto;">
+          <div style="padding: 30px 24px 0;">
+            <button type="button" onClick="{{ goMatches }}" style="display: inline-flex; align-items: center; gap: 10px; margin: 0 0 20px; min-height: 44px; padding: 0 16px 0 12px; border: 1px solid #ddd0c6; border-radius: 999px; background: #fffdfb; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #9d2b4e;" style-hover="background: #f7ecef; border-color: #9d2b4e;"><span style="font-size: 19px; letter-spacing: 0; line-height: 1;">←</span>Matches</button>
+            <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9d2b4e;">{{ detail.fit }}</div>
+            <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.1; margin: 12px 0 0;">{{ detail.couple }}</h2>
+            <div style="margin-top: 10px; font-size: 14px; color: #6b5f59;">{{ detail.dateLong }}</div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #e8ded4; border: 1px solid #e8ded4; margin: 26px 24px 0;">
+            <sc-for list="{{ detail.facts }}" as="f" hint-placeholder-count="4">
+              <div style="background: #fffdfb; padding: 16px 14px;">
+                <div style="font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #9a8d85;">{{ f.label }}</div>
+                <div style="font-size: 14.5px; color: #2a2321; margin-top: 6px; line-height: 1.35;">{{ f.value }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="padding: 28px 24px 0;">
+            <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9a8d85;">Their note</div>
+            <p style="margin: 12px 0 0; font-size: 15px; line-height: 1.7; color: #453c38; text-wrap: pretty;">{{ detail.note }}</p>
+          </div>
+
+          <div style="padding: 26px 24px 0;">
+            <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9a8d85;">Requested from your set</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;">
+              <sc-for list="{{ detail.songs }}" as="s" hint-placeholder-count="3">
+                <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 14px; color: #453c38; border-bottom: 1px solid #ddd0c6; padding-bottom: 3px;">{{ s }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div style="height: 28px;"></div>
+        </div>
+
+        <div style="padding: 18px 24px 26px; border-top: 1px solid #e8ded4; background: #faf6f1; display: flex; flex-direction: column; gap: 10px;">
+          <button type="button" onClick="{{ requestBook }}" style="width: 100%; border: none; background: #9d2b4e; color: #fdfaf7; font-size: 16px; font-weight: 500; padding: 18px; cursor: pointer; font-family: inherit;" style-hover="background: #85203f;">{{ bookLabel }}</button>
+          <button type="button" onClick="{{ noop }}" style="width: 100%; border: none; background: transparent; color: #6b5f59; font-size: 13.5px; padding: 4px; cursor: pointer; font-family: inherit; text-decoration: underline; text-underline-offset: 3px;" style-hover="color: #9d2b4e;">Message {{ detail.firstNames }} first</button>
+        </div>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;520&quot;,&quot;height&quot;:&quot;860&quot;}}">
+const DATA = [
+  {
+    couple: "Nora & Elliot Hayes",
+    fit: "Strong fit",
+    date: "Sat, May 16, 2026",
+    dateLong: "Saturday, May 16, 2026 · 6:30–8:00pm",
+    venue: "Wrenfield Barn, Hudson NY",
+    style: "Jazz standards",
+    budget: "$1,800 budget",
+    length: "90 min",
+    note: "We're doing a small seated dinner for 70 and want live music instead of a DJ for the whole evening. Something closer to a lounge set than a dance floor — piano and one voice is exactly the sound we keep coming back to.",
+    songs: ["The Way You Look Tonight", "Dream a Little Dream of Me", "La Vie en Rose", "Moon River"],
+    facts: [
+      { label: "Venue", value: "Wrenfield Barn, Hudson NY" },
+      { label: "Guests", value: "70, seated dinner" },
+      { label: "Budget", value: "$1,800" },
+      { label: "Set", value: "90 min, cocktail + dinner" }
+    ]
+  },
+  {
+    couple: "Priya & Daniel Osei",
+    fit: "Strong fit",
+    date: "Fri, June 5, 2026",
+    dateLong: "Friday, June 5, 2026 · 5:00–6:30pm",
+    venue: "The Arbor House, Beacon NY",
+    style: "Motown & soul",
+    budget: "$2,100 budget",
+    length: "90 min",
+    note: "Ceremony at five, then cocktails on the lawn. We'd love a singer who can do a soulful processional and then keep things easy and warm while people find their tables.",
+    songs: ["At Last", "Ain't No Mountain High Enough", "Isn't She Lovely"],
+    facts: [
+      { label: "Venue", value: "The Arbor House, Beacon NY" },
+      { label: "Guests", value: "110, lawn cocktails" },
+      { label: "Budget", value: "$2,100" },
+      { label: "Set", value: "90 min, ceremony + cocktail" }
+    ]
+  },
+  {
+    couple: "Maren & Josh Calderón",
+    fit: "Good fit",
+    date: "Sun, Sept 27, 2026",
+    dateLong: "Sunday, September 27, 2026 · 4:00–5:30pm",
+    venue: "Saltwater Chapel, Rockport MA",
+    style: "Acoustic covers",
+    budget: "$1,500 budget",
+    length: "75 min",
+    note: "Coastal afternoon wedding, 45 people. We want a couple of modern covers stripped back — the kind of thing where people stop talking for a second.",
+    songs: ["Can't Help Falling in Love", "First Day of My Life", "Landslide"],
+    facts: [
+      { label: "Venue", value: "Saltwater Chapel, Rockport MA" },
+      { label: "Guests", value: "45, outdoor" },
+      { label: "Budget", value: "$1,500" },
+      { label: "Set", value: "75 min, ceremony" }
+    ]
+  },
+  {
+    couple: "Tessa & Wren Ackerley",
+    fit: "Good fit",
+    date: "Sat, Oct 10, 2026",
+    dateLong: "Saturday, October 10, 2026 · 7:00–8:30pm",
+    venue: "Fern & Filament, Providence RI",
+    style: "Standards & French",
+    budget: "$1,650 budget",
+    length: "90 min",
+    note: "Late-evening reception in an old print shop. Candles, long tables, no dancing. We're after something intimate that suits a room where everyone can hear each other.",
+    songs: ["Fly Me to the Moon", "La Mer", "Come Away With Me"],
+    facts: [
+      { label: "Venue", value: "Fern & Filament, Providence RI" },
+      { label: "Guests", value: "60, seated dinner" },
+      { label: "Budget", value: "$1,650" },
+      { label: "Set", value: "90 min, dinner" }
+    ]
+  }
+];
+
+class Component extends DCLogic {
+  state = { screen: "landing", idx: 0, requested: false, bgFilled: true };
+
+  componentDidMount() {
+    const check = () => {
+      const el = document.getElementById("wedsinger-landing-bg");
+      if (!el) return;
+      const img = el.shadowRoot && el.shadowRoot.querySelector("img");
+      const filled = el.hasAttribute("data-filled") || !!(img && img.src);
+      if (filled !== this.state.bgFilled) this.setState({ bgFilled: filled });
+    };
+    this._obs = new MutationObserver(check);
+    this._obs.observe(document.body, { attributes: true, subtree: true, attributeFilter: ["data-filled"], childList: true });
+    check();
+    this._t = setInterval(check, 600);
+  }
+
+  componentWillUnmount() {
+    if (this._obs) this._obs.disconnect();
+    clearInterval(this._t);
+  }
+
+  renderVals() {
+    const d = DATA[this.state.idx];
+    const firstNames = d.couple.split(" & ").map(p => p.split(" ")[0]).join(" & ");
+    const f = this.state.bgFilled;
+    return {
+      bgScrim: f ? "rgba(38,24,22,0.62)" : "transparent",
+      bgMark: f ? "#f4cdd6" : "#9d2b4e",
+      bgInk: f ? "#fdf8f4" : "#2a2321",
+      bgBody: f ? "#f0e5de" : "#6b5f59",
+      bgAccent: f ? "#f2b9c6" : "#9d2b4e",
+      bgRule: f ? "rgba(253,248,244,0.42)" : "#ddd0c6",
+      bgShadow: f ? "0 1px 22px rgba(20,12,10,0.55)" : "none",
+      onLanding: this.state.screen === "landing",
+      onMatches: this.state.screen === "matches",
+      onDetail: this.state.screen === "detail",
+      goLanding: () => this.setState({ screen: "landing" }),
+      goMatches: () => this.setState({ screen: "matches" }),
+      matches: DATA.map((m, i) => ({ ...m, open: () => this.setState({ screen: "detail", idx: i, requested: false }) })),
+      detail: { ...d, firstNames },
+      bookLabel: this.state.requested ? "Booking request sent ✓" : "Request to book this date",
+      requestBook: () => this.setState({ requested: true }),
+      noop: () => {}
+    };
+  }
+}
+</script>
+</body>
+</html>
